@@ -1,7 +1,7 @@
 import socket
 import struct
 import time
-import log
+from common import log
 
 # Define constants
 PROTOCOL_MAGIC = 0xF6D5

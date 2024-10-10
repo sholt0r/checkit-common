@@ -1,5 +1,5 @@
 import requests as re
-import log
+from common import log
 
 def send_http_request(API_HOST, API_PORT, TOKEN, S_FUNC, LOGGER_NAME=None):
     try:
