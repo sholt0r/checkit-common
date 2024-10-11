@@ -43,7 +43,7 @@ class ColourFormatter(logging.Formatter):
         record.exc_text = None
         return output
 
-def setup_logger(logger_name=__name__, log_level=logging.DEBUG):
+def setup_logger(logger_name=__name__, log_level=logging.INFO):
     """
     Sets up and returns a logger with the given name and log level.
     The logger will have console output with colorized messages.
