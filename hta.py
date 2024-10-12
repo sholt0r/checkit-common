@@ -20,7 +20,7 @@ class HTTPServerState:
         self.player_limit = None
         self.tech_tier = None
     
-    def get_nested(dictionary, keys, default=None):
+    def get_nested(self, dictionary, keys, default=None):
         for key in keys:
             dictionary = dictionary.get(key, default)
             if dictionary is default:
