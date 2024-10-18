@@ -6,14 +6,14 @@ PROTOCOL_MAGIC=0xF6D5
 MESSAGE_TYPE_POLL=0
 PROTOCOL_VERSION=1
 
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.setblocking(False)
+
+num_pings = 10
+timeout = 1
+rtt_list = []
+
 try:
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.setblocking(False)
-
-    num_pings = 10
-    timeout = 1
-    rtt_list = []
-
     cookie = int(time.time() * 1000)
     request_message = struct.pack('<HBBQ', PROTOCOL_MAGIC, MESSAGE_TYPE_POLL, PROTOCOL_VERSION, cookie) + b'\x01'
 

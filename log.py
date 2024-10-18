@@ -37,28 +37,6 @@ class ColourFormatter(logging.Formatter):
 
 
 def setup_logger(logger_name=__name__, log_level=logging.INFO):
-    """
-    Sets up and returns a logger with the given name and log level.
-    The logger will have console output with colorized messages.
-
-    Parameters:
-    -----------
-    logger_name : str, optional
-        The name of the logger. If None, it defaults to the module's __name__.
-
-    log_level : int, optional
-        The logging level for the logger and the handler. 
-        Default is logging.DEBUG, but can be set to any valid logging level.
-
-    Returns:
-    --------
-    logging.Logger
-        A logger instance configured with the specified log level and colorized output.
-    """
-
-    if logger_name is None:
-        logger_name = __name__
-
     logger = logging.getLogger(logger_name)
 
  
